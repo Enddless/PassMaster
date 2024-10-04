@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include fluid-text(18, 16);
+  background: var(--color-dark);
+  width: 100%;
+  color: var(--color-light);
+  font-family: var(--font-family-base);
+  line-height: 1.28;
+  font-weight: 300;
+}
+a,
+button,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+h1 {
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #181717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #575757;
+  cursor: grab;
+}
+
+/* Скрыть стрелки в инпуте типа number для браузеров на основе WebKit (Chrome, Safari) */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Скрыть стрелки в инпуте типа number для Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
